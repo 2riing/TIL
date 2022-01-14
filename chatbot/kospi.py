@@ -1,5 +1,6 @@
 import imp
 import requests
+# 요청을 보내는 requests
 from bs4 import BeautifulSoup
 
 url = 'https://finance.naver.com/sise/'
@@ -21,5 +22,11 @@ result = data.select_one('#KOSPI_now')
 # 데이터 출력
 print(result.text)
 
+
+# URL 요청을 보내고, 문서를 달라는 프고르매 => client (프로그램 : 브라우저, request)
+# URL 요청이 오면, 문서를 한장 주는 프로그램 => server
+
 # 요청 Request => URL
 # 응답 Response => 문서 1장
+
+
