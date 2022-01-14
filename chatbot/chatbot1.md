@@ -1,22 +1,29 @@
 # 챗봇 만들기
 
 
-## 텔레그램을 통한 챗봇 제작
+## 텔레그램 챗봇 만들기 
 
 
 ### 파이썬 자료구조
+
+변수
+
+딕셔너리 
+
 
 - 리스트
 
 ```python 
 tel = ['1234-1234', 'a', 1]
 tel[2] = 1 
+dust =[40,50,80] dust[0]
 ```
 
 
 - 딕셔너리
 ```python
 menu = {'한식' = ['김치찌개', '0000-0000]}
+dust = {'영등포구'=40 , '종로구' =30}
 ```
 
 
@@ -79,13 +86,14 @@ python kospi.py
 ```
 lotto.py 와 kospi.py를 실행 
 
+</br>
 
 ### VSCODE를 통한 웹크롤링
 
 `웹 크롤링` == 웹에서 기어다니면서 데이터를 가져오는 것
 crawl = 기어가다. 
 
-```bash
+```python
 pip install beautifulsoup
 ```
 파싱해주는 beautifulsoup를 받아옴 
@@ -95,8 +103,10 @@ pip install beautifulsoup
 </br>
 
 1) request.get(url) -> respose 202라고 실행됨
-2) request.get(ulr).test ->드디어 내용을 받아옴
+2) request.get(ulr).test ->드디어 내용을 받아옴'
    
+</br>
+
 1) BeautifulSoup(문서)
 2) BeautifulSoup.select(경로)
 3) BeautifulSoup.select_one(경로)

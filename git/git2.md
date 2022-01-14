@@ -1,4 +1,4 @@
-# 22년1월13일 (git)
+# 22년1월13일 (Git clone/pull 그 외)
 
 </br>
 </br>
@@ -19,6 +19,8 @@ git pull origin master
 `pull` 명령어
 
 
+</br>
+</br>
 
 
 ## 기타
@@ -29,34 +31,41 @@ vscode 새로 시작
 ```bash
 git log --oneline
 ```
-로그를 짧게 
+로그를 짧게 보기
 
-### 하면 안되는 일
-- git hub 자체에서 commit 지양 
+</br>
+</br>
 
-git push
+### 하면 안되는 것
+git hub 자체에서 commit 지양 
 
-ctrl+C (^C)
+git push => git push origin master 
+
+</br>
+</br>
+
+
+## 그 외 
+`ctrl+C (^C)`
+
 어지간한 상황에서 탈출가능
 
-ctrl+l 
-위로 밀어 올리기 
+`ctrl + l` 
 
-q
+git bash code 위로 밀어 올리기 
+
+`q`
+
 git log 탈출
 
+</br>
 
-git push -u origin
--> 저 옵션을 쓰면 ..?
-익숙해지면 -u로 합시다 
 
 
 refactoring 
+
 => 결과는 같은데 과정은 개선되는 것
 
 
 
 
-변수
-리스트dus =[40,50,80] dust[0]
-딕셔너리 dust = {'영등포구'=40 , '종로구' =30}
