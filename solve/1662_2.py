@@ -23,6 +23,7 @@ for y in range(n+1):
     count = location[n-y]
     K = S[count-1] 
     print(K)
+    
         for z in range(l):
              Qcount = Qcount+1 
              if (S[count] ==')'):
