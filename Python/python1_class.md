@@ -53,9 +53,26 @@ Restart & Clear output하면 싹 다 사라짐
 
 
 
+In[*] => loading 중이라는 뜻
+
+
+
 ## 변수
 
 변수 : 컴퓨터 메모리 에 저장되어있는 ***' 값(객체)'***를 참조하기 위해 사용되는 ***'이름'***
+
+
+
+## 주석
+
+```python
+print('world')  # 주석은 2칸 이후가 국룰임
+
+
+print('how')  					 	  # 주석
+print('I got the superstar glow so')  # 주석 이런 방식으로 줄 맞춰주는 것도 괜찮음
+
+```
 
 
 
