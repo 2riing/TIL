@@ -1,14 +1,12 @@
-# values = list()
-
-# values[
-# 	{'name' = ['염수홍', '조용준', '이우현']
-# 	 'age' = '29'	
-# ]
 
 
-# values[0]['name'][0]
+a = '3.99'
+b = float(a)
+print(b)
+print(int(b))
 
-def add(a, **args):
-	return a, args
+print(int(3.5))
+print(int('3.5'))
 
-print(add(2, a=100, b=2))
+
+
