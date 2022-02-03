@@ -1,4 +1,4 @@
-# Python OOP(Object Oriented Programming.)
+# Python OOP(Object Oriented Programming)
 
 
 ## 서론 
