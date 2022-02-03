@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form action="" method="POST">
+      <div>
+        <label for="username">사용자</label>
+        <input id ="username" type="text" name = "username" placeholder="ID를 입력하세요" autofocus>
+      </div>
+      <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="pw" id="password" placeholder="password를 입력하세요" required>
+      </div>
+      <div>
+        extra: <input type="text" disabled>
+      </div>
+      <div>
+        <button>로그인</button>
+      </div>
+    </form>
+    <form action="http://google.com/serach" method="GET">
+        구글 search: <input type="text" name = "q">
+        <button>GO</button>
+    </form>
+
+
+    <!-- 
+        1.action="" 현재 URL 뒤에 ? + query
+        2. action "google.com" => ??? 
+    -->
+</body>
+</html>
