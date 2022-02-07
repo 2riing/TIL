@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap - 복사본.css">
+    <style>
+        .box {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            text-align: center
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box col">1</div>
+            <div class="box col">2</div>
+            <div class="box col">3</div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="box col-3">col-3</div>
+            <div class="box col-6">col-6</div>
+            <div class="box col-3">col-3</div>
+        </div>
+        <hr>
+        <!-- 전체가 12을 넘어서면? 
+            div.row>div.box.col-1*13
+            줄어들지 않고 넘어감-->
+        <!-- ctrl+alt 방향키 , multiline selector -->
+        <div class="row">
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+            <div class="box col-1">col-1</div>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- 총 4개 -->
+            <!-- 가장 작은 2개, 그 다음 3개 그다음 4개?
+                sm -> md-> lg -> xl -> xxl -->
+            <!-- 자연스러운 반응형 -->
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <div class="box col-6 col-sm-4 col-md-3">1</div>
+            <!-- 나누고 약수를 만들라는데 무슨 말인지 모르겠음 -->
+            <hr>
+            <h2>Nesting</h2>
+            <div class="row">
+                <div class="box col-6">
+                    <div class="row">
+                        <div class="box col-3">1</div>
+                        <div class="box col-3">2</div>
+                        <div class="box col-3">3</div>
+                        <div class="box col-3">4</div>
+                    </div>
+                </div>
+                <div class="box col-6">1</div>
+                <div class="box col-6">1</div>
+                <div class="box col-6">1</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="box col-6">고</div>
+            <div class="box col-6">
+                <div class="row">
+                    <div class="col-6">김</div>
+                    <div class="col-6">치</div>
+                    <div class="col-6">냉</div>
+                    <div class="col-6">장</div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h2>offset</h2>
+        <div class="row">
+            <!-- offset을 마진으로 처리하는 모습, 띄워주고 싶다 -->
+            <div class="box offset-2 col-3">1</div>
+            <div class="box col-3">1</div>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- offset도 전체 12중에 내가 몇개 가져갈지 고르는 것 -->
+            <div class="box col-md-4 offset-4">md4of4</div>
+            <div class="box col-md-4 offset-md-4 offset-lg-2">ddd</div>
+        </div>
+    </div>
+    <script scr="bootstrap.bundle - 복사본.js"></script>
+</body>
+</html>
+
+<!-- 문제 내기 너무 좋다는 breakpoint와 어떤 클래스를 써야하는지 -->
