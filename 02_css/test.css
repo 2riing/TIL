@@ -1,0 +1,21 @@
+/* flex */
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav__list{
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+/* 노란색은 마진 초록색은 패딩 */
+
+.main-nav__item{
+    margin: .5rem;
+    list-style:  none;
+}
+
+.main-nav__lint{
+    text-decoration: none;
+}

@@ -1,0 +1,105 @@
+
+
+/* 가로모드 (너비>높이) */
+@media (orientation: landscape){
+    h1{
+        color: green;
+    }
+}
+/* 세로모드 (높이>너비) */
+@media (orientation: portrat){
+    h1{
+        color: red
+    }
+}
+
+/* media type : all print screen speech */
+/* 프린트 모드일 때는 */
+@media only print{
+    * {
+        color: black !important;
+    }
+}
+
+@media (width: 300px){
+    h2{
+        color : green
+    }
+}
+
+/* 700px 이상일 경우 darkkhaki */
+@media (min-width: 700px){
+    h3{
+        color : darkkhaki;
+    }
+}
+
+/* 600px 이하이면 핑크색  */
+/* 600-700 사이는 지정이 안되어있어서 기본색  */
+@media (max-width: 600px){
+    h3{
+        color: fuchsia
+    }
+}
+
+/* 최소 700이면 노란색 */
+@media (min-width: 700px) {
+    h4{
+        color: yellow
+    }
+}
+
+/* 최소 800px이면 초록색 */
+@media (min-width: 800px) {
+    h4{
+        color: green;
+    }
+}
+
+/* 조건 */
+/* 두 조건이 모두 만족할 때 (and) */
+@media (max-height: 500px) and (max-width: 500px) {
+    h5{
+        color: rosybrown;
+    }
+}
+
+/* 두 조건중 하나라도 만족할 때(or) */
+@media (max-height: 500px) and (max-width: 500px){
+    p{
+        color: palegreen;
+    }
+}
+
+/* xs는 이제 존재하지 않음 sm md lg xl xxl만 존재 */
+
+/* class, id 쓸 때 띄어쓰기 금지 들여쓰기 2칸  */
+
+
+.flex-contatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    margin: 1rem;
+
+}
+
+/* 구글은 알파벳 순서대로 , NHN은 레이아웃 크기 순서대로 */
+/* 클래스 작명론
+block
+elements:블록 안에서만 
+inpu
+modifier : 형태 color size등
+
+.block
+.block__elem
+.block__elem--medifier
+.block-modifier
+
+재사용성이 높은 코드를 작성하도록
+
+list - item - link
+navbar - item - link
+
+*/
