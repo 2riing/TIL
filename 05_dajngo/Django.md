@@ -19,6 +19,18 @@ www.naver.com입력  : 네이버라는 페이지를 줘 ! (요청)
 
 네이버 웹페이지를 응답해줌
 
+- 웹서버
+
+http 라는 프로토콜로 들어오는 것이 web임.
+
+웹서버 : 요청이 들어왔을 때 응답을 해주는 것
+
+- framework (틀/일)
+
+틀에 박힌 일만 하면 된다. 
+
+안쓰는 곳 거의 없다..
+
 ### 정의
 
 파이썬 Web Framework
@@ -29,13 +41,17 @@ www.naver.com입력  : 네이버라는 페이지를 줘 ! (요청)
 
 서버에 미리 저장된 파일이 `추가적인 처리 없이` 그대로 전달되는 웹페이지
 
+ex) 매일 같은 떡볶이..
+
 ### Dynamic web page(동적 웹페이지)
 
 방문자와 상호작용 하기 때문에 페이지 내용은 그때그떄 다름
 
 서버 사이드 프로그래밍언어(Python, Java, C++ 등)가 사용된다.
 
-파일을 처리하고 DB와 상호작용이 일어남
+파일을 처리하고⭐ ***DB와 상호작용***이 일어남
+
+ex) 떡볶이 주세요 안맵게요, 로그인하는 것
 
 ### Framework
 
@@ -155,7 +171,7 @@ AWS라던지, 서버에 배포할 대 사용하는 것
 
 사용 X
 
-`manage.py` ❌
+`manage.py` ❌ `a.k.a. 집사`
 
 $ python manage.py <command> [option]
 
@@ -195,7 +211,7 @@ $ ***python manage.py*** strartapp articles
 
 view 함수들이 정의 되는 곳
 
-### C:\Users\user\OneDrive\바탕 화면\django\manage.py C:\Users\user\OneDrive\바탕 화면\django\firstpjt\urls.pyProject & Application
+### Application
 
 - Project : 앱은 여러 프로젝트에 있을 수 있음
 - Application : 실제 요청을 처리한다. 1프로젝트 多앱, 일반적으로 기능 단위로 작성함
@@ -217,7 +233,7 @@ project file - settings.py - INSTALLED_APPS = [ ]
 #### [참고]장고 루틴
 
 1. 가상환경 생성 및 활성화
-2. django설치
+2. django설치 ( $ pip install django==3.2.12 )
 3. 프로젝트 생성
 4. 서버 켜서 로켓 확인하기
 5. 앱 생성
@@ -267,3 +283,68 @@ render라는 함수는 첫번째 인자를 요청으로 받습니다.
 
 `app/templates/` 필수 경로 ! 
 
+## 추가설정
+
+LANGUAGE_CODE = 'en-us' -> 'ko-kr'
+
+TIME_ZONE = 'UTC' -> 'Asia/Seoul'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
+## Template
+
+데이터 `표현`을 제어하는 도구이자 `표현에 관련된 로직`
+
+### Django Template Languate(DTL)
+
+html은 반복과 조건을 쓸 수 없음. 
+
+그 한계를 극복한 것이 DTL
+
+조건, 반복, 변수 치환, 필터 등의 기능을 제공
+
+Python 처럼 if, for을 사용할 수 있지만 **Python 코드로 실행되는 것이 아님**
+
+### DTL Syntax
+
+1. Variale
+
+```python
+{{ variable }}
+```
+
+render을 사용하여 template파일로 넘겨 사용하는 것. 
+
+dot(.)을 사용하여 변수 속성에 접근할 수 있음.
+
+render()의 세번재 인자로 {'key':value}와 같이 딕셔너리 형태로 넘겨줌
+
+### [참고] 데이터의 흐름에 따른 코드 작성순서
+
+1. URL
+2. VIEW
+3. TEMPLATE
+
+### [참고] 실습코드
+
+$ mkdir basic_tv
+
+$ cd basic_tv/
+
+$ python -m venv venv
+
+$ code , (vscode 실행)
+
+$ source venv/Scripts/activate (가상환경 실행)
+
+$ pip list (리스트 확인)
+
+$ pip install django ==3.2.12 (장고설치)
+
+$ django-admin startproject basic_tv . (basic_tv라는 플젝폴더 생성)
+
+$ python manage.py runserver (서버 실행)
