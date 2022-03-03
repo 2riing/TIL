@@ -348,3 +348,58 @@ $ pip install django ==3.2.12 (장고설치)
 $ django-admin startproject basic_tv . (basic_tv라는 플젝폴더 생성)
 
 $ python manage.py runserver (서버 실행)
+
+$ pytho manage.py start app (app_name) (app생성)
+
+
+
+## [실습 순서]
+
+1. app생성
+2. mater `settings` - `Installed apps`에 생성한 `'app_name'` 추가
+3. path('(app_name)/', include('pages.urls')),
+4. app- `url.py` 생성
+5. url.py에 작성 `from django.urls import path`
+6. `from . import views`
+7. `urlpatterns =[ ]`
+8. path('dinner/\<str:menu>/\<int:num>/', vies.dinner)
+9. app - `view.py`에 작성
+10. def dinner(request, menu, num):
+11. return render(request, 'dinner.html')
+12. `pages`-`templates`-`dinner.html` 생성 
+
+
+
+
+
+BASE_DIR  => 우리의 앱 최상단을 이야기함
+
+BASE_DIR = Path(__file__).resulove().parent.parent
+
+'DIRS' : [BASE_DIR /'templates']
+
+
+
+
+
+$ mkdir -p templates/galaxy
+
+$ touch urls.py
+
+$ cd ../../../ 
+
+$ cd - (뒤로가기)
+
+
+
+
+
+안전하게 만드려면 모든 URL을 POST방식으로 만들어야함
+
+단점 : URL을 타고 들어갈 수가 없음.. 
+
+Unifomed 
+
+Resouce
+
+Locator
