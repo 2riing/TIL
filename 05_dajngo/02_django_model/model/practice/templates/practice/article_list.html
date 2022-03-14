@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Article List</h1>
+
+
+{% for article in articles %}
+<li>
+    <a href="{{ article.pk }}/">{{ article.pk }}번글</a>
+</li>
+<li>
+    <a href="{% url 'practice:article_detail' article.pk %}}/">{{ article.pk }}번글</a>
+</li>
+{% endfor %} 
+
+{% endblock content %}
+

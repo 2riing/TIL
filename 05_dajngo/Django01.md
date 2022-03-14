@@ -349,9 +349,47 @@ $ django-admin startproject basic_tv . (basic_tv라는 플젝폴더 생성)
 
 $ python manage.py runserver (서버 실행)
 
-$ pytho manage.py start app (app_name) (app생성)
+$ python manage.py start app (app_name) (app생성)
 
+$ pip freeze > reuirements.txt
 
+$ pip install django_extensions ipython 
+
+$ python manage.py makemigrations practice (0001initial.py생성됨)
+
+$ practice\migrations\0001_inintial.py 
+
+$ python manage.py migrate practice (db로 왜 넘어가지?)
+
+$ python manage.py migrate
+
+$ python manage.py sqlmigrate practice 0001 (table추가)
+
+$ python manage.py dbsehll(안씀)
+
+$ python manage.py shell_plus
+
+Student / s1= Students() / s1.name = '2riing' / s1.save()
+
+$ python manage.py shell_plus --print-sql (실제 sql이 실행되는게 보이는모드)
+
+s2.Student() / s2.name= 'june' / s2.major = '경영학' / s2.save()
+
+s3 = Student(name='김준호', age=30, major='컴공')
+
+s= Student(); s.name; s.age; s.major; s.save()
+
+Student.objects.create(name='yong', age=20 major='수학')
+
+Student.objects.all()
+
+s1.Student.objects.get(pk =1)
+
+Studnets.objects.filter(age__gt=25) # age가 25보다 큰사람을 fileter
+
+python manage.py makemigrations 
+
+python manage.py migrate practice
 
 ## [실습 순서]
 

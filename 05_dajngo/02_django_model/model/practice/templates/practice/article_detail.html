@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% comment %} 기능임포트 tz : timezone {% endcomment %}
+
+{% load tz %}
+
+{% block content %}
+<h1> Article List</h1>
+
+{{ article.title }}
+
+<small>
+
+{{ article.created_at | localtime }} | {{ article.updated_at}}
+
+</small>
+
+<p>{{ article.content }}</p>
+{% endblock content %}
+
