@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{article.title}}</h1>
+<h2>{{article.user.username}}</h2>
+<div>
+    {% if request.user == article.user %}
+    <div>
+        <a href=" {% url 'article:articles_update' article.pk %} ">
+            <button>Update</button>
+        </a>
+    </div>
+    <form action=" {% url 'article:articles_delete' article.pk %} " method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button>Delete</button>
+    </form>
+</div>
+{% endif %}
+
+
+
+<p>{{article.content|linebreaksbr}}</p>
+
+<hr>
+<form action=" {% url 'articles:comment_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>댓!</button>
+</form>
+<ul>
+    {% for comment in article.comment_set.all %}
+    <li>
+        {{comment.user.username}} : {{ comment.content }}
+        
+        {% if request.user == comment.user or request.user == article.user %}
+        <form action=" {% url 'articles:comment_delete'article.pk comment.pk %} " method = "POST">
+            
+            {% csrf_token %}
+            <button>[x]</button>
+        {% endif %}
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
+{% endblock content %}
