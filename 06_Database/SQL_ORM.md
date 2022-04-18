@@ -336,8 +336,12 @@
 
 1. 전체 평균 나이
 
-      ```python
+   ```python
    # orm
+   from django.db.models import Avg
+   User.objects.aggregate(Avg('age'))
+   
+   {'age__avg': 28.23} => default 가 col + __avg
    ```
 
       ```sql
@@ -346,8 +350,10 @@
 
 2. 김씨의 평균 나이
 
-      ```python
+   ```python
    # orm
+   User.objects.filter(last_name='김').aggregate(Avg('age'))
+   Min('age'), Max('age'), Sum('balance')
    ```
 
       ```sql
@@ -358,6 +364,9 @@
 
    ```python
    # orm
+   In [59]: User.objects.filter(country='강원도').aggregate(Avg('balance'))
+       
+   Out[59]: {'balance__avg': 157895.0}
    ```
 
    ```sql
@@ -368,6 +377,8 @@
 
    ```python
    # orm
+   
+   User.object.aggregate(Max('balance'))
    ```
 
       ```sql
@@ -378,24 +389,29 @@
 
    ```python
    # orm
+   from django.db.models import Sum
+   User.object.aggregate(Sum('balance'))
    ```
-
+   
       ```sql
    -- sql
       ```
 
 
 
-#### 4.2 Annotate
+#### 4.2 Annotate(추가 메모, 주석을 달다 )
 
 1. 지역별 인원 수
 
    ```PYTHON
    # orm
+   from django.db.models import Count
+   
+   User.objects.values('country').annotate(Count('country')).values('country__count')
    ```
-
+   
    ```SQL
    -- sql
    ```
-
+   
    

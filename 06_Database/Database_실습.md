@@ -63,3 +63,16 @@ Comment.objects.filter(article_id = 1)
 `settings.py`
 
 AUTH_USER_MODEL = 'accounts.User'
+
+
+
+`models.py`
+
+```python
+from django.conf import settings
+user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+```
+
+
+
+rm db.sqlite3
