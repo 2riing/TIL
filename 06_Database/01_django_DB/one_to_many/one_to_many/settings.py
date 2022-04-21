@@ -34,6 +34,7 @@ AUTH_USER_MODEL = 'accounts.User'
 INSTALLED_APPS = [
     'accounts',
     'articles',
+    'faker',
     'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1,5 +1,5 @@
 """
-WSGI config for form project.
+WSGI config for many_to_many project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'form.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'many_to_many.settings')
 
 application = get_wsgi_application()

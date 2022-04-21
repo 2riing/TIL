@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>나는 {{ user }}</h2>
+<h2>{{ profile_user }}의 프로필</h2>
+<h2>rank : {{profile_user.get_rank}}</h2>
+
+
+
+{% if profile_user != user %}
+<form action=" {% url 'accounts:follow' profile_user %}" method='POST'>
+    {% csrf_token %}
+    {% if is_follow %}
+    <button>언팔로우</button>
+    {% else %}
+    <button>팔로우</button>
+    {% endif %}
+</form>
+{% endif %}
+팔로워 {{ profile_user.fans.count }}
+팔로워 {{ profile_user.stars.count }}
+
+
+<hr>
+{% if profile_user == user %}
+ <form action="{% url 'accounts:delete' %}" method="POST">
+  {% csrf_token %}
+  <button class="btn btn-danger">탈퇴 :(</button>
+</form> 
+
+ <div>
+  <a href="{% url 'accounts:update' %}" >
+    <button class="btn btn-warning">회원정보 수정</button>
+  </a>
+</div>
+
+
+
+<hr>
+
+
+
+
+내가 작성한글
+{% for article in profile_user.articles.all %}
+<li><a href=" {% url 'articles:article_detail' article.pk %}">{{article.title}}
+[+ {{ article.like_users.count }}] ({{ article.comment_set.count }})
+</a>
+</li>
+{% endfor %}
+{% endif %}
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+
+
+<form action=" {% url 'articles:comment_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>댓!</button>
+</form>
+<ul>
+    {% for comment in article.comment_set.all %}
+    <li>
+        {{comment.user.username}} : {{ comment.content }}
+        
+        {% if request.user == comment.user or request.user == article.user %}
+        <form action=" {% url 'articles:comment_delete' article.pk comment.pk %} " method = "POST">
+            
+            {% csrf_token %}
+            <button>[x]</button>
+        {% endif %}
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

@@ -5,7 +5,11 @@
 
 <ul>
     {% for article in articles %}
-    <li><a href=" {% url 'articles:article_detail' article.pk %}">{{article.title}}</a></li>
+    <li><a href=" {% url 'articles:article_detail' article.pk %}">{{article.title}}
+    [+ {{ article.like_users.count }}]
+    ({{ article.comment_set.count }})
+    </a>
+    </li>
     {% endfor %}
 </ul>
 
