@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunch & Lotto</title>
+</head>
+
+<body>
+  
+  <div id="app">
+    <h2>점심메뉴</h2>
+    <button @click='randombob'>Pick One</button>
+    <p>{{ menu }}</p>
+    <hr>
+    <h2>로또</h2>
+    <button @click='randomLotto'>Get Lucky Numbers</button>
+    <p>{{ ran_num }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        menu : '몰라',
+        ran_num :'0'
+      },
+      methods: {
+        randombob : function() {
+          this.menu = _.sample(['떡볶이', '김밥', '치킨'])
+        },
+        randomLotto : function() {
+          this.ran_num = _.random(1,46)
+        },
+      },
+    })
+  </script>
+</body>
+
+</html>
